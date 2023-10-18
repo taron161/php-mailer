@@ -1,0 +1,6 @@
+.catalog-wrapper {
+  @media (min-width: $desktop) {
+    display: flex;
+    gap: 30px;
+  }
+}

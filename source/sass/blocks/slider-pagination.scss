@@ -1,0 +1,67 @@
+// пагинация слайдера
+.slider-pagination {
+  display: none;
+  margin: 0 auto;
+  margin-top: -7px;
+
+  @media (min-width: $desktop) {
+    display: block;
+  }
+}
+
+.slider-pagination__list {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+}
+
+.slider-pagination__button {
+  position: relative;
+  width: 62px;
+  height: 24px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 62px;
+    height: 4px;
+    background-color: $white;
+    left: 0;
+    top: 10px;
+  }
+
+  &:focus::after,
+  &:hover::after {
+    background-color: $primary-color;
+    opacity: 25%;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active::after {
+    background-color: $primary-color;
+    opacity: 100%;
+  }
+
+  &--current:focus::after,
+  &--current:hover::after,
+  &--current::after {
+    background-color: $primary-color;
+    opacity: 1;
+  }
+}
+
+.slider-pagination__item {
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+}

@@ -1,0 +1,41 @@
+.filter {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 16px;
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 26px;
+    margin-left: auto;
+    justify-content: end;
+  }
+}
+
+.filter__text {
+  font-weight: 600;
+  margin-right: 8px;
+  padding-top: 5px;
+
+  @media (min-width: $tablet) {
+    margin-right: 10px;
+  }
+}
+
+.filter__select {
+  border: none;
+  background-color: transparent;
+  padding: 6.5px 10px;
+  width: 165px;
+  color: $primary-color;
+  font-family: "Monserrat", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+
+  &:focus,
+  &:hover {
+    outline: none;
+    background-color: $active-color;
+  }
+}

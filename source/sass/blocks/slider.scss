@@ -1,0 +1,54 @@
+.slider__image {
+  @media (min-width: $tablet) and (max-width: ($desktop - 1px)) {
+    width: 476px;
+    height: 476px;
+    position: absolute;
+    top: 352px;
+    left: 146px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 600px;
+    height: 600px;
+    margin-left: 23px;
+  }
+}
+
+.slider__button {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 100%;
+  border: none;
+  background-color: transparent;
+  top: 0;
+  color: $primary-color;
+  cursor: pointer;
+
+  &:focus,
+  &:enabled:hover {
+    outline: none;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, $white 100%);
+  }
+
+  &:enabled:active {
+    background: linear-gradient(90deg, rgba(120, 89, 207, 0) 0%, rgba(120, 89, 207, 0.25)  100%);
+  }
+
+  &:disabled {
+    color: $grey;
+  }
+
+  @media (min-width: $tablet) {
+    width: 80px;
+  }
+}
+
+.slider-button-next {
+  right: 0;
+}
+
+.slider-button-prev {
+  transform: rotate(180deg);
+  left: 0;
+}

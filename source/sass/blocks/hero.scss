@@ -1,0 +1,118 @@
+.hero {
+  width: 100vw;
+  background-color: $bg-color;
+}
+
+.hero__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  width: $mobile;
+  margin: 0 auto;
+  padding: 20px;
+  padding-bottom: 60px;
+
+  @media (min-width: $tablet) {
+    width: $tablet;
+    padding: 60px 80px;
+    padding-bottom: 308px;
+    margin-bottom: 188px;
+  }
+
+  @media (min-width: $desktop) {
+    flex-direction: row;
+    width: $desktop;
+    padding-top: 30px;
+    padding-bottom: 60px;
+    margin-bottom: 0;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: $tablet) and (max-width: ($desktop - 1px)) {
+  .hero__text-wrapper {
+    order: 1;
+  }
+
+  .hero__slider {
+    order: 2;
+  }
+}
+
+.hero__notation {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.48px;
+  color: $primary-color;
+  text-align: center;
+  margin-top: 3px;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet) {
+    margin: 0;
+  }
+
+  @media (min-width: $desktop) {
+    text-align: start;
+  }
+}
+
+.hero__title {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: 0.72px;
+  margin: 4px 0 10px;
+  text-align: center;
+
+  @media (min-width: $tablet) {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 80px;
+    letter-spacing: 1.12px;
+    margin-bottom: 16px;
+  }
+
+  @media (min-width: $desktop) {
+    text-align: start;
+  }
+}
+
+.hero__text {
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  @media (min-width: $desktop) {
+    text-align: start;
+    margin-bottom: 40px;
+  }
+}
+
+.hero__text br {
+  display: none;
+
+  @media (min-width: $tablet) {
+    display: block;
+  }
+}
+
+.hero__text-wrapper {
+  @media (min-width: $desktop) {
+    width: 625px;
+    margin-left: 30px;
+    margin-top: -12px;
+  }
+}

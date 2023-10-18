@@ -1,0 +1,57 @@
+.user-navigation {
+  margin-left: auto;
+
+  @media (min-width: $tablet) {
+    margin: 0;
+    display: flex;
+    width: 122px;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: $desktop) {
+    width: 320px;
+    gap: 20px;
+  }
+}
+
+.user-navigation a {
+  font-size: 12px;
+  line-height: 16px;
+  padding: 22px;
+
+  &:active {
+    background-color: $active-color;
+  }
+
+  @media (min-width: $tablet) {
+    line-height: 0;
+    padding: 32px 22px;
+
+    &:focus,
+    &:hover {
+      color: $primary-color;
+      outline: none;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    line-height: 16px;
+    padding: 32px 20px;
+  }
+}
+
+.user-navigation__name {
+  @media (max-width: ($desktop - 1px)) {
+    display: none;
+  }
+}
+
+.user-navigation__icon {
+  @media (min-width: $desktop) {
+    margin-bottom: -4px;
+    margin-right: 7px;
+    min-width: 16px;
+    min-height: 16px;
+  }
+}

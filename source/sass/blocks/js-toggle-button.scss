@@ -1,0 +1,58 @@
+.js-toggle-button {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  background-color: $white;
+  padding: 22px;
+  right: 0;
+  border: none;
+  cursor: pointer;
+  box-sizing: content-box;
+
+  &:active {
+    background-color: $active-color;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 1.5px;
+    background-color: $base-color;
+    box-shadow:
+      0 5px 0 0 $base-color,
+      0 10.5px 0 0 $base-color;
+    left: 22px;
+    top: 24px;
+  }
+
+  &--opened {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 17px;
+      height: 1.5px;
+      background-color: $base-color;
+      box-shadow: none;
+      transform: rotate(45deg);
+      top: 29px;
+      left: 22px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 17px;
+      height: 1.5px;
+      background-color: $base-color;
+      box-shadow: none;
+      transform: rotate(-45deg);
+      left: 22px;
+      top: 29px;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    display: none;
+  }
+}

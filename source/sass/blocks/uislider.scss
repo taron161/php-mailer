@@ -1,0 +1,60 @@
+.uislider {
+  position: relative;
+}
+
+.uislider__handler {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  background-color: $white;
+  border: 2px solid $primary-color;
+  border-radius: 100%;
+  z-index: 10;
+
+  &--max {
+    left: 241px;
+
+    @media (min-width: $tablet) {
+      left: 192px;
+    }
+
+    @media (min-width: $desktop) {
+      left: 274px;
+    }
+  }
+}
+
+.uislider__strip {
+  position: absolute;
+  top: 10px;
+  z-index: 0;
+  width: 280px;
+  height: 2px;
+  background-color: #e2e2e2;
+
+  @media (min-width: $tablet) {
+    width: 223px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 318px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    z-index: 5;
+    width: 241px;
+    height: 2px;
+    background-color: $primary-light;
+
+    @media (min-width: $tablet) {
+      width: 192px;
+    }
+
+    @media (min-width: $desktop) {
+      width: 274px;
+    }
+  }
+}
