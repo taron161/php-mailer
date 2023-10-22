@@ -14,7 +14,7 @@ $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, 
 $mail->Port = 465; // TCP port to connect to / этот порт может отличаться у других провайдеров
 
 $mail->setFrom('mesterager@gmail.com'); // от кого будет уходить письмо?
-$mail->addAddress('taron39@yandex.ru');
+$mail->addAddress('rbru-metrika@yandex.ru');
 
 $mail->Subject = 'Заявка с тестового сайта';
 $mail->Body    = '' .$text;
