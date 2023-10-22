@@ -1,0 +1,49 @@
+.navigation {
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  background-color: #45927fe6;
+  backdrop-filter: blur(2px);
+  height: 100vh;
+  left: 0;
+  top: 65px;
+
+  &--closed {
+    @media (max-width: ($desktop - 1px)) {
+      display: none;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    height: auto;
+    background-color: $header-color;
+  }
+}
+
+.navigation__wrapper {
+  width: $mobile;
+  padding: 48px 19px;
+  margin: 0 auto;
+
+  @media (min-width: $desktop) {
+    position: relative;
+    width: $desktop;
+    padding: 10px 90px;
+  }
+}
+
+.navigation__link {
+  width: 196px;
+  background-color: $button-mobile;
+  color: $button-color;
+  text-align: center;
+  margin-top: 39px;
+
+  @media (min-width: $desktop) {
+    position: absolute;
+    top: -94px;
+    right: 90px;
+    background-color: $button-color;
+    color: $white;
+  }
+}

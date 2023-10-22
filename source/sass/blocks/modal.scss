@@ -1,0 +1,117 @@
+.modal {
+  display: none;
+
+  &--opened {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100vh;
+    background-color: #45927fe6;
+    backdrop-filter: blur(2px);
+    margin: auto;
+    z-index: 200;
+  }
+}
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  width: $mobile;
+  margin: 100px auto;
+  padding: 17px;
+
+  @media (min-width: $desktop) {
+    width: $desktop;
+    padding: 90px;
+  }
+
+  & label {
+    display: block;
+    color: $white;
+    margin-left: 10px;
+  }
+
+  & textarea {
+    display: block;
+    width: 100%;
+    height: 250px;
+    border: 4px solid $button-color;
+    border-radius: 10px;
+    padding: 10px;
+    outline: none;
+    resize: none;
+
+    @media (min-width: $desktop) {
+      padding: 20px;
+      font-size: 18px;
+      line-height: 26px;
+    }
+
+    &:invalid {
+      border-color: #ff0000;
+    }
+  }
+}
+
+.modal__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+
+  @media (min-width: $desktop) {
+    align-self: center;
+    flex-direction: row;
+    gap: 20px;
+
+    & .button {
+      width: 196px;
+    }
+  }
+}
+
+.modal__close-button {
+  position: relative;
+  width: 37px;
+  height: 26px;
+  padding: 17px;
+  left: 20px;
+  top: 20px;
+  border: none;
+  cursor: pointer;
+  box-sizing: content-box;
+  background-color: transparent;
+  z-index: 200;
+  transform: scale(150%);
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 35px;
+    height: 4px;
+    background-color: $white;
+    box-shadow: none;
+    transform: rotate(45deg);
+    top: 29px;
+    right: 17px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 35px;
+    height: 4px;
+    background-color: $white;
+    box-shadow: none;
+    transform: rotate(-45deg);
+    right: 17px;
+    top: 29px;
+  }
+
+  &:hover,
+  &:active {
+    opacity: 50%;
+  }
+}

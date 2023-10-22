@@ -1,46 +1,33 @@
 .header {
+  position: relative;
+  width: 100%;
+  background-color: $button-mobile;
+
+  @media (min-width: $desktop) {
+    background-color: $white
+  }
+}
+
+.header__wrapper {
   display: flex;
+  padding: 3px 18px;
+  padding-left: 0;
   align-items: center;
-  background-color: $white;
-  padding: 0;
-  padding-left: 20px;
-  width: $mobile;
-  flex-grow: 0;
-  flex-shrink: 0;
   margin: 0 auto;
-
-  @media (max-width: ($tablet - 1px)) {
-    position: relative;
-  }
-
-  @media (min-width: $tablet) {
-    justify-content: space-between;
-    width: $tablet;
-    padding: 0 20px;
-  }
+  width: $mobile;
 
   @media (min-width: $desktop) {
     width: $desktop;
-    padding: 0 40px;
+    padding: 12px 90px;
   }
 }
 
-.header a {
-  color: $base-color;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-weight: 500;
-}
 
-.header__title {
-  display: none;
+.header__link {
+  line-height: 0;
 
-  @media (min-width: $desktop) {
-    display: block;
-    width: 126px;
-    font-size: 12px;
-    line-height: 16px;
-    font-weight: 400;
-    margin-left: 20px;
+  &:hover,
+  &:active {
+    opacity: 50%;
   }
 }

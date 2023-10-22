@@ -1,58 +1,60 @@
 .js-toggle-button {
   position: relative;
-  width: 16px;
-  height: 16px;
-  background-color: $white;
-  padding: 22px;
-  right: 0;
+  width: 37px;
+  height: 26px;
+  padding: 17px;
+  left: 0;
+  top: 1px;
   border: none;
   cursor: pointer;
   box-sizing: content-box;
-
-  &:active {
-    background-color: $active-color;
-  }
+  background-color: transparent;
 
   &::before {
     content: "";
     position: absolute;
-    width: 16px;
-    height: 1.5px;
-    background-color: $base-color;
+    width: 37px;
+    height: 4px;
+    background-color: $header-color;
     box-shadow:
-      0 5px 0 0 $base-color,
-      0 10.5px 0 0 $base-color;
-    left: 22px;
-    top: 24px;
+      0 11px 0 0 $header-color,
+      0 22px 0 0 $header-color;
+    left: 17px;
+    top: 18px;
   }
 
   &--opened {
     &::before {
       content: "";
       position: absolute;
-      width: 17px;
-      height: 1.5px;
-      background-color: $base-color;
+      width: 35px;
+      height: 4px;
+      background-color: $header-color;
       box-shadow: none;
       transform: rotate(45deg);
       top: 29px;
-      left: 22px;
+      left: 17px;
     }
 
     &::after {
       content: "";
       position: absolute;
-      width: 17px;
-      height: 1.5px;
-      background-color: $base-color;
+      width: 35px;
+      height: 4px;
+      background-color: $header-color;
       box-shadow: none;
       transform: rotate(-45deg);
-      left: 22px;
+      left: 17px;
       top: 29px;
     }
   }
 
-  @media (min-width: $tablet) {
+  &:hover,
+  &:active {
+    opacity: 50%;
+  }
+
+  @media (min-width: $desktop) {
     display: none;
   }
 }

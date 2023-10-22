@@ -1,14 +1,39 @@
 .footer {
-  width: $mobile;
-  margin: 0 auto;
-  flex-grow: 0;
-  flex-shrink: 0;
-
-  @media (min-width: $tablet) {
-    width: $tablet;
-  }
+  width: 100%;
+  background-color: #08664f;
+  padding: 42px 0 41px;
+  margin-top: -5px;
 
   @media (min-width: $desktop) {
+    margin: 0;
+    padding: 55px 0;
+  }
+}
+
+.footer__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  width: $mobile;
+  margin: 0 auto;
+  padding: 0 17px;
+
+  @media (min-width: $desktop) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     width: $desktop;
+    padding: 0 90px;
+  }
+}
+
+.footer__link {
+  line-height: 0;
+
+  &:hover,
+  &:active {
+    opacity: 50%;
   }
 }

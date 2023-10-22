@@ -1,0 +1,6 @@
+.menu-open {
+  @media (max-width: ($desktop - 1px)) {
+    height: 100vh;
+    overflow: hidden;
+  }
+}

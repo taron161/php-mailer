@@ -1,32 +1,28 @@
 .button {
+  display: block;
+  padding: 11px;
+  line-height: 21px;
+  font-size: 14px;
   text-decoration: none;
-  border: none;
+  background-color: $button-color;
   color: $white;
-  padding: 8px 20px;
-  background-color: $primary-color;
-  border-radius: 4px;
+  border-radius: 50px;
 
-  &:focus,
-  &:hover {
-    outline: none;
-    background-color: $primary-light;
-  }
-
+  &:hover,
   &:active {
-    background-color: $primary-dark;
+    background-color: #00d29f;
+    color: $white;
   }
+}
 
-  &:disabled {
-    background-color: $grey;
-  }
+.button--secondary {
+  color: $button-color;
+  border: 1px solid $button-color;
+  background-color: $white;
 
-  &--reset {
-    background-color: $white;
-    color: $primary-color;
-
-    &:focus,
-    &:hover {
-      color: $white;
-    }
+  &:hover,
+  &:active {
+    background-color: $button-color;
+    color: $white;
   }
 }

@@ -1,0 +1,160 @@
+.services {
+  width: $mobile;
+  margin: 0 auto;
+  margin-top: 49px;
+  margin-bottom: 35px;
+  padding: 0 17px;
+
+  @media (min-width: $desktop) {
+    width: $desktop;
+    padding: 0 90px;
+    margin-top: 97px;
+    margin-bottom: 90px;
+  }
+}
+
+.services__container {
+  display: flex;
+  flex-direction: column;
+  background-color: $services-bg;
+  border-radius: 5px;
+
+  @media (min-width: $desktop) {
+    justify-content: start;
+    background-image: url("../../images/services-pc.jpg");
+  }
+}
+
+.services__wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 22px 23px 42px;
+  margin-top: -5px;
+
+  @media (min-width: $desktop) {
+    margin: 0;
+    width: 613px;
+    padding: 53px 63px 56px;
+  }
+}
+
+.services__title {
+  font-size: 26px;
+  line-height: 34px;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  @media (min-width: $desktop) {
+    font-size: 38px;
+    line-height: 49px;
+  }
+
+  & span {
+    display: block;
+    margin-top: 5px;
+    text-transform: lowercase;
+    font-size: 14px;
+    line-height: 18px;
+
+    @media (min-width: $desktop) {
+      font-size: 22px;
+      line-height: 28px;
+      margin-top: 2px;
+    }
+  }
+}
+
+.services__list {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  list-style-type: none;
+  margin-top: 12px;
+  margin-bottom: 17px;
+  font-size: 14px;
+  line-height: 20.5px;
+  padding-left: 16px;
+
+
+  @media (min-width: $desktop) {
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 16px;
+    margin-bottom: 33px;
+    gap: 4px;
+  }
+}
+
+.services__item {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    left: -15px;
+    top: 7px;
+    width: 7px;
+    height: 7px;
+    background-color: $header-color;
+    border-radius: 100%;
+
+    @media (min-width: $desktop) {
+      top: 8px;
+    }
+  }
+}
+
+.services__image {
+  @media (min-width: $desktop) {
+    display: none;
+  }
+}
+
+.services__price {
+  font-size: 18px;
+  line-height: 23px;
+
+  @media (min-width: $desktop) {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
+.services__old-price {
+  font-size: 14px;
+  line-height: 18px;
+  color: #868686;
+  text-decoration: line-through;
+  margin-left: 10px;
+
+  @media (min-width: $desktop) {
+    font-size: 16px;
+    line-height: 24px;
+    margin-left: 16px;
+  }
+}
+
+.services__link-wrapper {
+  display: flex;
+  gap: 6px;
+  margin: 0 auto;
+  margin-left: -3px;
+  margin-top: 27px;
+
+  @media (min-width: $desktop) {
+    gap: 14px;
+    margin: 0;
+    margin-top: 26px;
+    justify-content: start;
+  }
+}
+
+.services__link {
+  width: 137px;
+  text-align: center;
+  padding: 10px;
+
+  @media (min-width: $desktop) {
+    width: 196px;
+  }
+}

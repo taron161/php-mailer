@@ -1,83 +1,39 @@
 .menu {
-  list-style-type: none;
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
+  gap: 10px;
+  list-style: none;
+  width: $mobile;
   margin: 0;
-  padding: 0;
-
-  @media (max-width: ($tablet - 1px)) {
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    background-color: $white;
-  }
-
-  @media (min-width: $tablet) {
-    flex-direction: row;
-  }
 
   @media (min-width: $desktop) {
-    gap: 20px;
-    justify-content: center;
-    padding: 0;
+    width: 700px;
+    flex-direction: row;
+    gap: 30px;
   }
-}
 
-.menu__item {
-  margin: 0;
-  padding: 0;
+  &--footer {
+    gap: 15px;
 
-  @media (max-width: ($tablet - 1px)) {
-    width: 100%;
-    border-top: 1px solid $active-color;
+    @media (max-width: ($desktop - 1px)) {
+      font-size: 14px;
+      line-height: 18px;
+    }
 
-    &:last-child {
-      border-bottom: 1px solid $active-color;
+    @media (min-width: $desktop) {
+      gap: 30px;
+      justify-content: center;
+      margin-left: 40px;
+      margin-bottom: 15px;
     }
   }
 }
-
-.menu__item--current a {
-  @media (min-width: $tablet) {
-    color: $primary-color;
-  }
-}
-
-.menu__item--current {
-  @media (min-width: $tablet) {
-    position: relative;
-
-    &::after {
-      position: absolute;
-      content: "";
-      width: 100%;
-      height: 2px;
-      background-color: $primary-color;
-      bottom: 0;
-      left: 0;
-    }
-  }
-}
-
 .menu__link {
-  display: block;
-  text-align: center;
-  margin: 0;
-  padding: 20px;
+  color: $white;
+  text-decoration: none;
 
-  @media (min-width: $tablet) {
-    margin: 0;
-    padding: 32px 20px;
-
-    &:focus,
-    &:hover {
-      color: $primary-color;
-      outline: none;
-    }
-  }
-
+  &:hover,
   &:active {
-    background-color: $active-color;
+    opacity: 50%;
   }
 }
